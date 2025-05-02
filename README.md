@@ -27,7 +27,7 @@ Copy the `.fap` to your `apps/` directory under Momentum Firmware. Example:
 applications_user/
 └── dht11_sensor/
     ├── dht11_sensor_menu_v0_1.c
-    ├── dht11_sensor.png
+    ├── dht11_sensor_icon.png
     └── application.fam
 ```
 
