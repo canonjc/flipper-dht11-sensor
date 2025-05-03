@@ -2,78 +2,89 @@
 
 A lightweight, interactive sensor reader for the DHT11 temperature and humidity module, designed specifically for the Flipper Zero running Momentum Firmware.
 
----
+📦 Version: v0.1
 
-## 📦 Version: **v0.1**
+✨ Features
 
-### ✨ Features
+Interactive menu UI (Acquire Data, Configuration, About, Exit)
 
-- Interactive menu UI (Acquire Data, Configuration, About, Exit)
-- Configuration for:
-  - ✅ GPIO pin (PB3, PB2, PC3)
-  - ✅ Units (Celsius or Fahrenheit)
-  - ✅ Read interval (1s, 1 min, 5 min)
-- Persistent settings saved to `ext/dht11_sensor.cfg`
-- Uses DWT-based microsecond timing for stable DHT11 reads
-- Graceful app exit with `[Back]`
+Configuration for:
 
----
+✅ GPIO pin (PB3, PB2, PC3)
 
-## 📌 Installation
+✅ Units (Celsius or Fahrenheit)
 
-Copy the `.fap` to your `apps/` directory under Momentum Firmware. Example:
+✅ Read interval (1s, 1 min, 5 min)
 
-```
+Persistent settings saved to ext/dht11_sensor.cfg
+
+Uses DWT-based microsecond timing for stable DHT11 reads
+
+Graceful app exit with [Back]
+
+📌 Installation
+
+Copy the .fap to your apps/ directory under Momentum Firmware. Example:
+
 applications_user/
 └── dht11_sensor/
     ├── dht11_sensor_menu_v0_1.c
     ├── dht11_sensor_icon.png
     └── application.fam
-```
 
 Build with:
 
-```
 ufbt dht11_sensor
-```
 
----
+📐 Pinout (Flipper GPIO)
 
-## 📐 Pinout (Flipper GPIO)
-
-```
 DHT11     Flipper GPIO
 =====     ============
 VCC   →   3V
 GND   →   Pin 3 (GND)
 DATA  →   Pin 5 (PB3) — default
            or Pin 6 (PB2), Pin 7 (PC3)
-```
 
+🧾 About
 
+Designed by: Javier Canon
 
----
+April 2025
 
-## 🧾 About
+Platform: Flipper Zero (Momentum Firmware)
 
-Designed by: **Javier Canon**\
-Platform: **Flipper Zero (Momentum Firmware)**\
-License: **GPLv3**\
-GitHub: *[https://github.com/canonjc/flipper-dht11-sensor](https://github.com/canonjc/flipper-dht11-sensor)*
+License: GPLv3
 
----
+GitHub: https://github.com/canonjc/flipper-dht11-sensor
 
-## 💡 Roadmap
+💡 Roadmap
 
-See the `dht11_roadmap` document for planned improvements.
+🔜 Upcoming Features
 
----
+Show last sensor read status (OK, Timeout, CRC Error)
 
-## 🎨 ASCII Logo
+Display count of read failures
 
-```
+Add optional dark mode
+
+Improve visual contrast in configuration menu
+
+Configuration: allow custom read interval entry
+
+Logging to file (CSV format on SD)
+
+Sensor selection support (DHT11/DHT22)
+
+🧪 Experimental Ideas
+
+Graph view of recent readings (line chart)
+
+QR code export for fast mobile import
+
+Diagnostic test mode
+
+🎨 ASCII Logo
+
   D . H . T . 1 . 1
-```
 
 Stay cool, stay dry! ☁️🌡️
-
