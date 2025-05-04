@@ -1,0 +1,17 @@
+# For details & more options, see documentation/AppManifests.md in firmware repo
+
+App(
+    appid="dht11_sensor",  # Must be unique
+    name="App dht11_sensor",  # Displayed in menus
+    apptype=FlipperAppType.EXTERNAL,
+    entry_point="dht11_sensor_app",
+    stack_size=2 * 1024,
+    fap_category="Examples",
+    # Optional values
+    # fap_version="0.1",
+    fap_icon="dht11_sensor_icon.png",  # 10x10 1-bit PNG
+    fap_description="DTH11 sensor management",
+    fap_author="Javier Canon",
+    fap_weburl="https://github.com/canonjc/flipper-dht11-sensor",
+    fap_icon_assets="images",  # Image assets to compile for this application
+)
