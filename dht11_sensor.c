@@ -143,7 +143,7 @@ void render_gui(Canvas* canvas, void* context) {
     canvas_clear(canvas);
     canvas_set_font(canvas, FontPrimary);
     if(in_menu) {
-        canvas_draw_str(canvas, 4, 10, "DHT11 Sensor v0.16");
+        canvas_draw_str(canvas, 24, 10, "DHT11 Sensor");
         const char* menu[] = {"Acquire Data", "Configuration", "About", "Exit"};
         for(int i = 0; i < 4; i++) {
             if(i == selected_menu_item) canvas_draw_box(canvas, 2, 14 + i * 12, 120, 12);
@@ -152,7 +152,7 @@ void render_gui(Canvas* canvas, void* context) {
             canvas_set_color(canvas, ColorBlack);
         }
     } else if(in_config) {
-        canvas_draw_str(canvas, 4, 12, "Configuration");
+        canvas_draw_str(canvas, 24, 12, "Configuration");
         char line[32];
         for(int i = 0; i < 3; i++) {
             if(i == selected_menu_item) {
@@ -168,11 +168,12 @@ void render_gui(Canvas* canvas, void* context) {
             canvas_draw_str(canvas, 6, 28 + i * 14, line);
         }
     } else if(in_about) {
-        canvas_draw_str(canvas, 8, 14, "DHT11 Sensor");
-        canvas_draw_str(canvas, 4, 28, "Designed by Javier Canon");
-        canvas_draw_str(canvas, 2, 42, "https://github.com/javi-canon/flipper-dht11-sensor");
+        canvas_draw_str(canvas, 0, 14, ".DHT11 Sensor v0.1");
+        canvas_draw_str(canvas, 0, 28, ".Designed by Javier Canon");
+        canvas_draw_str(canvas, 0, 42, ".https://github.com/");
+        canvas_draw_str(canvas, 0, 56, "canonjc/flipper-dht11");
     } else {
-        canvas_draw_str(canvas, 6, 12, "Reading...");
+        canvas_draw_str(canvas, 32, 12, "R e a d i n g . . .");
         char line[32];
         float display_temp = use_fahrenheit ? (temperature * 9.0 / 5.0 + 32.0) : temperature;
         snprintf(line, sizeof(line), "Temp: %.1f %c", (double)display_temp, use_fahrenheit ? 'F' : 'C');
