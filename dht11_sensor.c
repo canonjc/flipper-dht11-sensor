@@ -169,8 +169,8 @@ void render_gui(Canvas* canvas, void* context) {
         }
     } else if(in_about) {
         canvas_draw_str(canvas, 8, 14, "DHT11 Sensor");
-        canvas_draw_str(canvas, 4, 28, "Designed by Javier");
-        canvas_draw_str(canvas, 2, 42, "github.com/javier/dht11");
+        canvas_draw_str(canvas, 4, 28, "Designed by Javier Canon");
+        canvas_draw_str(canvas, 2, 42, "https://github.com/canonjc/flipper-dht11-sensor");
     } else {
         canvas_draw_str(canvas, 6, 12, "Reading...");
         char line[32];
