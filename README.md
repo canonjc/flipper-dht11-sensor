@@ -2,47 +2,40 @@
 
 A lightweight, interactive sensor reader for the DHT11 temperature and humidity module, designed specifically for the Flipper Zero running Momentum Firmware.
 
-📦 Version: v0.1
+## 📦 Version: **v0.1**
 
-✨ Features
+### ✨ Features
 
-Interactive menu UI (Acquire Data, Configuration, About, Exit)
+- Interactive menu UI (Acquire Data, Configuration, About, Exit)
+- Configuration for:
+  - ✅ GPIO pin (PB3, PB2, PC3)
+  - ✅ Units (Celsius or Fahrenheit)
+  - ✅ Read interval (1s, 1 min, 5 min)
+- Persistent settings saved to `ext/dht11_sensor.cfg`
+- Uses DWT-based microsecond timing for stable DHT11 reads
+- Graceful app exit with `[Back]`
 
-Configuration for:
+---
 
-✅ GPIO pin (PB3, PB2, PC3)
-
-✅ Units (Celsius or Fahrenheit)
-
-✅ Read interval (1s, 1 min, 5 min)
-
-Persistent settings saved to ext/dht11_sensor.cfg
-
-Uses DWT-based microsecond timing for stable DHT11 reads
-
-Graceful app exit with [Back]
-
-🧪 Requirements
+## 🧪 Requirements
 
 To run this proof-of-concept, you will need:
 
-✅ A Flipper Zero device running Momentum Firmware
-
-✅ A DHT11 sensor module, commonly available from:
-
-Amazon
-
-Digitec
-
-AliExpress
-
-or other electronics distributors
+- ✅ A **Flipper Zero** device running **Momentum Firmware**
+- ✅ A **DHT11 sensor module**, commonly available from:
+  - [Amazon](https://www.amazon.com/)
+  - [Digitec](https://www.digitec.ch/)
+  - [AliExpress](https://www.aliexpress.com/)
+  - or other electronics distributors
 
 Ensure proper wiring between the sensor and Flipper GPIO headers.
 
-📌 Installation
+---
 
-Copy the .fap to your apps/ directory under Momentum Firmware. Example:
+## 📌 Installation
+
+### Create the structure
+Under Momentum Firmware structure `applications_user` create this:
 
 applications_user/
 └── dht11_sensor/
@@ -50,11 +43,17 @@ applications_user/
     ├── dht11_sensor_icon.png
     └── application.fam
 
-Build with:
+### Build with:
 
-ufbt dht11_sensor
+Run `ufbt` to compile the `.fap` app
 
-📐 Pinout (Flipper GPIO)
+  ufbt dht11_sensor
+
+### Upload to flipper0
+Copy the compiled app `.fap` under `/dist` folder to your `apps/` directory in your flipper0 runing Momentum. i.e you can use qfliper interface
+
+
+## 📐 Pinout (Flipper GPIO)
 
 DHT11     Flipper GPIO
 =====     ============
@@ -63,7 +62,7 @@ GND   →   Pin 3 (GND)
 DATA  →   Pin 5 (PB3) — default
            or Pin 6 (PB2), Pin 7 (PC3)
 
-🧾 About
+## 🧾 About
 
 Designed by: Javier Canon
 
@@ -75,7 +74,7 @@ License: GPLv3
 
 GitHub: https://github.com/canonjc/flipper-dht11-sensor
 
-💡 Roadmap
+## 💡 Roadmap
 
 🔜 Upcoming Features
 
@@ -101,7 +100,7 @@ QR code export for fast mobile import
 
 Diagnostic test mode
 
-🎨 ASCII Logo
+## 🎨 ASCII Logo
 
   D . H . T . 1 . 1
 
