@@ -72,7 +72,7 @@ Platform: Flipper Zero (Momentum Firmware)
 
 License: GPLv3
 
-GitHub: https://github.com/canonjc/flipper-dht11-sensor
+GitHub: https://github.com/javi-canon/flipper-dht11-sensor
 
 ## 💡 Roadmap
 

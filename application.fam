@@ -12,6 +12,6 @@ App(
     fap_icon="dht11_sensor_icon.png",  # 10x10 1-bit PNG
     fap_description="DTH11 sensor management",
     fap_author="Javier Canon",
-    fap_weburl="https://github.com/canonjc/flipper-dht11-sensor",
+    fap_weburl="https://github.com/javi-canon/flipper-dht11-sensor",
     fap_icon_assets="images",  # Image assets to compile for this application
 )
