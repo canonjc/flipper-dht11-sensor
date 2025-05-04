@@ -22,6 +22,24 @@ Uses DWT-based microsecond timing for stable DHT11 reads
 
 Graceful app exit with [Back]
 
+🧪 Requirements
+
+To run this proof-of-concept, you will need:
+
+✅ A Flipper Zero device running Momentum Firmware
+
+✅ A DHT11 sensor module, commonly available from:
+
+Amazon
+
+Digitec
+
+AliExpress
+
+or other electronics distributors
+
+Ensure proper wiring between the sensor and Flipper GPIO headers.
+
 📌 Installation
 
 Copy the .fap to your apps/ directory under Momentum Firmware. Example:
